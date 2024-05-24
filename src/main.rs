@@ -11,6 +11,20 @@ struct Chip8 {
     stack: [u16; 16], // there needs to be 16 of these
 }
 
+struct Display {
+    frame: [[bool; 64]; 32], //honestly, debatable if this is a good implimentation decision
+}
+
+struct Instruction(u8, u8);
+impl Instruction {
+    // fn matchTo(&self) -> functionPTR
+}
+
 fn main() {
     println!("Hello, world!");
+}
+
+fn byte_reader(filename: String) -> Instruction {
+    // look at file input and output, read some shit from the screen and do something!!!
+    Instruction(0xFF, 0xFF)
 }
